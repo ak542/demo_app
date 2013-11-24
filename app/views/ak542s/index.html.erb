@@ -1,0 +1,29 @@
+<h1>Listing ak542s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ak542s.each do |ak542| %>
+      <tr>
+        <td><%= ak542.name %></td>
+        <td><%= ak542.email %></td>
+        <td><%= link_to 'Show', ak542 %></td>
+        <td><%= link_to 'Edit', edit_ak542_path(ak542) %></td>
+        <td><%= link_to 'Destroy', ak542, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ak542', new_ak542_path %>
